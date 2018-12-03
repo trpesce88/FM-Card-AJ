@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    window.onload=function(){
+      
+function opengreetingCard() {
+  $(this).toggleClass('open');
+}
+
+$('.greetingCard').click(opengreetingCard);
+    }
+
+</script>
+
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css?family=Roboto|Kelly+Slab|Mr+Dafoe');
+
+#ForemostMedia_AaronJach {display:none;}
+
+.greetingCard {
+    perspective: 1200px;  
+    margin: 40px 0;
+    position: relative;
+    left: 35%;
+	display:inline-block;
+}
+
+.tile {
+    width:400px;
+    height:400px;
+    position: absolute;
+}
+
+.greetingCard .front {
+    -webkit-transition-duration: 2s;
+    -webkit-transform-origin: 0 0;
+    -webkit-transform-style: preserve-3d; 
+    z-index: 2; 
+}
+
+.greetingCard .front .outside,
+.greetingCard .front .inside {
+    position: absolute;
+    -webkit-backface-visibility: hidden; 
+}
+
+.greetingCard .front .outside {
+        background: #1f4e5f;
+		border:#d2dbdf solid 4px;
+		
+}
+.greetingCard .front .outside h1 {text-align:center;
+		padding:0px 0;
+		font-family: 'Kelly Slab', cursive;
+		font-size: 100px;
+		color: #aacfd0;
+		
+}
+.greetingCard .front .inside {
+     background: #1f4e5f;
+	
+    -webkit-transform: rotateY(-180deg); 
+}
+
+.in-bottom {
+    z-index: 1;
+	box-shadow:20px 20px 50px grey;  
+	background-color: #e5f0f0;
+	
+}
+
+.in-bottom p {
+	color: #1f4e5f;
+	font-family: 'Roboto', sans-serif;
+	margin: 18px;
+	font-size: 18px;
+}
+
+.in-bottom .sig {
+	float:right;
+	font-size: 30px;
+	color: #1f4e5f;
+	font-family: 'Mr Dafoe', cursive;
+	margin: 20px;
+
+}
+
+
+.greetingCard.open .front {
+    -webkit-transform: rotateY(-180deg); 
+}
+
+</style>
+</head>
+<body>
+
+<div id="ForemostMedia_AaronJach">
+I figured you'd pop the hood. So, hey there! I'm sorry this didn't reach you guys in the proper "24-hr window", but I figured this would be more impactful than scatching some words on a Thank You card from Walgreens. I want to say thank you again for the exuberance you displayed at the interview, it was nice to be around someone with such a passion for the field. </div>
+
+  <div class="greetingCard">
+    <div class="tile front">
+        <div class="tile outside"><h1>Thank You. </h1></div>
+        <div class="tile inside"></div>
+    </div>
+    <div class="tile in-bottom"><p>Hey Aaron Jach, </p>
+	<p>&emsp;Thank you so much for taking the time to meet with me. It was wonderful to learn more about Foremost Media and the Front-End Developer position. After our conversation, I am even more excited about the chance to join the team. Given the opportunity, I truly feel that I could be a valuable addition to the company. I look forward to hearing from you about the next steps in the hiring process. Please feel free to contact me if I can provide any additional information.</p>
+	<span class="sig">&ndash; Tricia Pesce</span></div>
+</div>
+
+
+</body>
+</html>
+
+
+
